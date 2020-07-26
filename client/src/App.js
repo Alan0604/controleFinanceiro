@@ -5,6 +5,7 @@ import Transactions from './components/Transactions/Transactions';
 import Spinner from './components/Spinner/Spinners';
 import ModalTransaction from './components/Modal/ModalTransaction';
 import CreateModal from './components/Modal/CreateModal';
+import CreateBy from './components/CreateBy/CreateBy';
 
 export default function App() {
   const [allTransactions, setAllTransactions] = useState([]);
@@ -149,6 +150,8 @@ export default function App() {
       {isNewModalOpen && (
         <CreateModal onSave={handleCreateData} onClose={handleClose} />
       )}
+
+      <CreateBy />
     </div>
   );
 }
